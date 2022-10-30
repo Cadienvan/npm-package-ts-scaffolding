@@ -16,12 +16,13 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "ts-types": " tsc --emitDeclarationOnly --outDir dist",
-    "build": "npm run lint && rimraf dist && node ./esbuild.js && npm run ts-types",
+    "ts-types": "tsc --emitDeclarationOnly --outDir dist",
+    "build": "npm run lint && rimraf dist && node esbuild.js && npm run ts-types",
     "demo-test": "for file in demo/*.js; do node $file; done",
     "prettier": "prettier --write .",
     "lint": "eslint . --ext .ts",
     "prepare": "husky install",
+    "dev": "jest --watch",
     "test": "jest --no-cache"
   },
   "prepublish": "npm run build",
