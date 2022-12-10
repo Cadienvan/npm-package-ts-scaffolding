@@ -24,7 +24,7 @@
     "lint": "eslint . --ext .ts",
     "dev": "jest --watch",
     "test": "jest --no-cache",
-    "release:common": "npm run check && npm run build && npm publish --access public && git push --follow-tags origin main",
+    "release:common": "git add package.json && git commit -m 'chore: Version Update' && npm run check && npm run build && npm publish --access public && git push --follow-tags origin main",
     "release:patch": "npm version patch && npm run release:common",
     "release:minor": "npm version minor && npm run release:common",
     "release:major": "npm version major && npm run release:common"
