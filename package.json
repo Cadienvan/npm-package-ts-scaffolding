@@ -1,7 +1,7 @@
 {
   "name": "@cadienvan/npm-package-ts-scaffholding",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.4",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -22,7 +22,8 @@
     "prettier": "prettier --write .",
     "lint": "eslint . --ext .ts",
     "dev": "jest --watch",
-    "test": "jest --no-cache"
+    "test": "jest --no-cache",
+    "release": "./release.sh"
   },
   "prepublish": "npm run build",
   "devDependencies": {
@@ -45,23 +46,13 @@
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
       "npx prettier --write",
-      "npx eslint --fix"
+      "npx eslint --fix",
+      "git add"
     ]
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/Cadienvan/npm-package-ts-scaffholding.git"
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
   },
   "license": "MIT",
   "author": "Michael Di Prisco <cadienvan@gmail.com>"
