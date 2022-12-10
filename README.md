@@ -31,7 +31,7 @@ This is a simple tool to create a new project with the basic files needed to pub
 You can change the `package.json` file to your liking, bringing your own package name and description.  
 Please, remember to give me a star if you like the project!
 
-## How To Install?
+# How To Install?
 
 ```bash
 git clone git://github.com/Cadienvan/npm-package-ts-scaffholding.git package_name
@@ -39,7 +39,7 @@ cd package_name
 npm install
 ```
 
-## What's Inside?
+# What's Inside?
 
 - Typescript
 - Jest
@@ -49,7 +49,7 @@ npm install
 - Esbuild
 - Commitlint
 
-## How to push and release an update?
+# How to push and release an update?
 
 ```bash
 git add --all
@@ -57,4 +57,5 @@ git commit -m "chore: update package"
 npm run release:patch
 ```
 
+Remember to follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) standard.
 You can substitute `patch` with `minor` or `major` to update the version accordingly.
