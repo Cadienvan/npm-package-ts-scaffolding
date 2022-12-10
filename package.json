@@ -17,13 +17,17 @@
   },
   "scripts": {
     "ts-types": " tsc --emitDeclarationOnly --outDir dist",
-    "build": "npm run lint && rimraf dist && NODE_ENV=production node esbuild.js && npm run ts-types",
+    "check": "npm run prettier && npm run lint",
+    "build": "npm run check && rimraf dist && NODE_ENV=production node esbuild.js && npm run ts-types",
     "demo-test": "for file in demo/*.js; do node $file; done",
     "prettier": "prettier --write .",
     "lint": "eslint . --ext .ts",
     "dev": "jest --watch",
     "test": "jest --no-cache",
-    "release": "./release.sh"
+    "release:common": "npm run check && npm run build && npm publish --access public && git push --follow-tags origin main",
+    "release:patch": "npm version patch && npm run release:common",
+    "release:minor": "npm version minor && npm run release:common",
+    "release:major": "npm version major && npm run release:common"
   },
   "prepublish": "npm run build",
   "devDependencies": {
@@ -46,8 +50,7 @@
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
       "npx prettier --write",
-      "npx eslint --fix",
-      "git add"
+      "npx eslint --fix"
     ]
   },
   "repository": {

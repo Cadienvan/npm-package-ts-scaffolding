@@ -3,7 +3,7 @@
 A simple scaffholding tool for creating a new project to be published to npm.  
 It provides a build command that will compile your code to a CommonJS Node 14.16 target, allowing named imports for CommonJS packages inside ESM files.  
 The package contains a simple "hello world" based on TypeScript, built on esbuild, tested through Jest and linted with ESLint and Prettier.  
-It also provides a Husky pre-commit hook to run the linter and tests before committing.
+It also provides a Husky pre-commit hook to run linter, tests and `git add` before committing, so you can simple `git commit` without worrying about anything else.
 
 ## What does it mean?
 
@@ -47,3 +47,14 @@ npm install
 - Prettier
 - Husky
 - Esbuild
+- Commitlint
+
+## How to push and release an update?
+
+```bash
+git add --all
+git commit -m "chore: update package"
+npm run release:patch
+```
+
+You can substitute `patch` with `minor` or `major` to update the version accordingly.
