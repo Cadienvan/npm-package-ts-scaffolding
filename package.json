@@ -1,5 +1,5 @@
 {
-  "name": "@cadienvan/npm-package-ts-scaffholding",
+  "name": "@cadienvan/npm-package-ts-scaffolding",
   "private": false,
   "version": "0.1.0",
   "main": "dist/index.js",
@@ -55,7 +55,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Cadienvan/npm-package-ts-scaffholding.git"
+    "url": "git://github.com/Cadienvan/npm-package-ts-scaffolding.git"
   },
   "license": "MIT",
   "author": "Michael Di Prisco <cadienvan@gmail.com>"
