@@ -1,5 +1,6 @@
 {
   "name": "@cadienvan/npm-package-ts-scaffolding",
+  "description": "A scaffolding for npm packages written in TypeScript",
   "private": false,
   "version": "0.1.1",
   "main": "dist/index.js",
@@ -58,5 +59,17 @@
     "url": "git://github.com/Cadienvan/npm-package-ts-scaffolding.git"
   },
   "license": "MIT",
-  "author": "Michael Di Prisco <cadienvan@gmail.com>"
+  "author": "Michael Di Prisco <cadienvan@gmail.com>",
+  "keywords": [
+    "npm",
+    "package",
+    "typescript",
+    "scaffolding"
+  ],
+  "contributors": [
+    {
+      "name": "Antonio Caputo",
+      "url": "https://github.com/tonycaputome"
+    }
+  ]
 }

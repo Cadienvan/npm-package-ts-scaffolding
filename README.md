@@ -60,3 +60,15 @@ npm run release:patch
 
 Remember to follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) standard.
 You can substitute `patch` with `minor` or `major` to update the version accordingly.
+
+# How to run tests?
+
+```bash
+npm test
+```
+
+# Contributing
+
+If you want to contribute to this project, please open an issue or a pull request.  
+I will be happy to review it and merge it if it's useful.  
+Please, remember to follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) standard.  
