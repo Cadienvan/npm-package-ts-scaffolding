@@ -21,8 +21,8 @@
     "check": "npm run prettier && npm run lint && npm test",
     "build": "npm run check && rimraf dist && NODE_ENV=production node esbuild.js && npm run ts-types",
     "demo-test": "for file in demo/*.js; do node $file; done",
-    "prettier": "prettier --write .",
-    "lint": "eslint . --ext .ts",
+    "prettier": "prettier --write ./src",
+    "lint": "eslint ./src --ext .ts",
     "dev": "jest --watch",
     "test": "jest --no-cache",
     "release:common": "npm run build && git push --follow-tags origin main && npm publish --access public",
@@ -48,6 +48,12 @@
     "rimraf": "^3.0.2",
     "ts-jest": "^29.0.3",
     "typescript": "^4.9.4"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "npx prettier --write",
+      "npx eslint --fix"
+    ]
   },
   "repository": {
     "type": "git",
