@@ -1,3 +1,13 @@
+### 0.3.0 (2022-12-12)
+
+##### Documentation Changes
+
+*  updated changelog ([b5625f01](https://github.com/Cadienvan/npm-package-ts-scaffolding/commit/b5625f018456d5cf43512fa7dd00efd2c5686ffc))
+
+##### New Features
+
+*  reverted wrong commits + added automatic changelog ([ff77db5f](https://github.com/Cadienvan/npm-package-ts-scaffolding/commit/ff77db5fbb9336d7502022923c11bdb0cf0c9d4a))
+
 ### 0.2.0 (2022-12-12)
 
 #### 0.1.2 (2022-12-12)
