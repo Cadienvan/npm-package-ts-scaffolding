@@ -1,3 +1,9 @@
+#### 0.3.1 (2022-12-12)
+
+##### New Features
+
+*  lint-staged brought back + fixed eslint and prettier paths ([f2b8081e](https://github.com/Cadienvan/npm-package-ts-scaffolding/commit/f2b8081edce7ee853c7b8beca693276d90bdbfbc))
+
 ### 0.3.0 (2022-12-12)
 
 ##### Documentation Changes
