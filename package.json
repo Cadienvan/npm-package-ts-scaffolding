@@ -2,7 +2,7 @@
   "name": "@cadienvan/npm-package-ts-scaffolding",
   "description": "A scaffolding for npm packages written in TypeScript",
   "private": false,
-  "version": "0.3.1",
+  "version": "0.0.1",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -17,14 +17,14 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "ts-types": " tsc --emitDeclarationOnly",
+    "ts-types": "tsc --emitDeclarationOnly",
     "check": "npm run prettier && npm run lint && npm test",
     "build": "npm run check && rimraf dist && NODE_ENV=production node esbuild.js && npm run ts-types",
-    "demo-test": "for file in demo/*.js; do node $file; done",
     "prettier": "prettier --write ./src",
     "lint": "eslint ./src --ext .ts",
     "dev": "jest --watch",
     "test": "jest --no-cache",
+    "coverage": "jest --coverage",
     "release:common": "npm run build && git push --follow-tags origin main && npm publish --access public",
     "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'docs: updated changelog' && npm version patch && npm run release:common",
     "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'docs: updated changelog' && npm version minor && npm run release:common",
@@ -66,11 +66,5 @@
     "package",
     "typescript",
     "scaffolding"
-  ],
-  "contributors": [
-    {
-      "name": "Antonio Caputo",
-      "url": "https://github.com/tonycaputome"
-    }
   ]
 }
