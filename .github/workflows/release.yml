@@ -3,7 +3,7 @@ name: Releases
 on:
   push:
     tags:
-      - "v*"
+      - 'v*'
 
 jobs:
   build:
@@ -16,5 +16,4 @@ jobs:
         with:
           generateReleaseNotes: true
           makeLatest: true
-          name: ${{ github.event.head_commit.message }}
           token: ${{ secrets.GITHUB_TOKEN }}
