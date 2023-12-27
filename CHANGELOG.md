@@ -1,3 +1,10 @@
+#### 0.0.3 (2023-12-27)
+
+##### Chores
+
+*  update dependencies ([55189701](https://github.com/Cadienvan/npm-package-ts-scaffolding/commit/551897016fe713ea750f8b8c9ae935ca4b825f7c))
+*  removing test.ts from tsconfig.json ([06390f97](https://github.com/Cadienvan/npm-package-ts-scaffolding/commit/06390f974ab84fc14a9e99183eaab3b52f38655e))
+
 #### 0.0.2 (2023-04-22)
 
 ##### Chores
